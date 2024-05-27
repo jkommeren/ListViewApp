@@ -17,23 +17,18 @@ namespace ListViewApp
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Task.Run(() =>
-            {
-                Dispatcher.Dispatch(() =>
-                {
 
-                    Devices.Clear();
+            Devices.Clear();
 
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Apple Device", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Microsoft", MAUI.Shared.Models.DevicePlatformOwner.Microsoft), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Apple Device", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Microsoft", MAUI.Shared.Models.DevicePlatformOwner.Microsoft), null, null, false));
-                    Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
-                });
-            });
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Apple Device", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Microsoft", MAUI.Shared.Models.DevicePlatformOwner.Microsoft), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Apple Device", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Microsoft", MAUI.Shared.Models.DevicePlatformOwner.Microsoft), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
+
         }
     }
 

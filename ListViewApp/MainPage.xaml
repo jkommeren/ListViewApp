@@ -1,46 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ListViewApp.MainPage"
-            BindingContext="{Binding Source={RelativeSource Self}}">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ListViewApp.MainPage"
+    BindingContext="{Binding Source={RelativeSource Self}}">
 
     <ScrollView>
-        <VerticalStackLayout
-            Margin="60,0"
-            Spacing="25">
-            <Button Text="Refresh" Clicked="Button_Clicked"/>
-            
+        <VerticalStackLayout Margin="60,0" Spacing="25">
+            <Button Text="Refresh" Clicked="Button_Clicked" />
+
             <Border
-  HorizontalOptions="Fill"
-  Stroke="{StaticResource PrimaryBrush}"
-  HeightRequest="140"
-  Margin="0,5,0,10">
+                HorizontalOptions="Fill"
+                Stroke="{StaticResource PrimaryBrush}"
+                HeightRequest="150"
+                Margin="0,5,0,10">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5" />
                 </Border.StrokeShape>
                 <CollectionView
-ItemsSource="{Binding Devices}"
-SelectionMode="Single">
+                    ItemsSource="{Binding Devices}"
+                    Margin="2,0"
+                    SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" HorizontalItemSpacing="2" />
+                    </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Grid
-                HorizontalOptions="Fill"
-                HeightRequest="50"
-                MaximumHeightRequest="50">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label
-                Margin="15,0"
-                Text="{Binding Device.DeviceName}"
-                HorizontalOptions="Start"
-                VerticalOptions="Center" />
-                                <Label
-                Text="{Binding Device.DevicePlatform}"
-                VerticalOptions="Center"
-                Grid.Column="1" />
-                            </Grid>
+                            <Border
+                                Stroke="DeepPink"
+                                HeightRequest="140"
+                                WidthRequest="140">
+                                <Grid HorizontalOptions="Fill" MaximumHeightRequest="140">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label
+                                        Margin="15,0"
+                                        Text="{Binding Device.DeviceName}"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        Text="{Binding Device.DevicePlatform}"
+                                        VerticalOptions="Center"
+                                        Grid.Column="1" />
+                                </Grid>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5" />
+                                </Border.StrokeShape>
+                            </Border>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>

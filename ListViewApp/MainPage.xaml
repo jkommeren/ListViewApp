@@ -30,20 +30,22 @@
                                 Stroke="DeepPink"
                                 HeightRequest="140"
                                 WidthRequest="140">
-                                <Grid HorizontalOptions="Fill" MaximumHeightRequest="140">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
+                                <Grid HorizontalOptions="Center" MaximumHeightRequest="140">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <!--  Clipboard: Text="&#x1F4CB;"  -->
+                                    <!--  Rocket: &#x1F680;  -->
                                     <Label
-                                        Margin="15,0"
-                                        Text="{Binding Device.DeviceName}"
-                                        HorizontalOptions="Start"
+                                        Text="&#x1F680;"
+                                        FontSize="40"
                                         VerticalOptions="Center" />
+
                                     <Label
                                         Text="{Binding Device.DevicePlatform}"
-                                        VerticalOptions="Center"
-                                        Grid.Column="1" />
+                                        HorizontalOptions="Center"
+                                        Grid.Row="1" />
                                 </Grid>
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="5" />

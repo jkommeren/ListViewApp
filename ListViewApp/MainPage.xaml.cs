@@ -1,5 +1,7 @@
 ﻿using MAUI.ViewModels;
 using System.Collections.ObjectModel;
+using System.Net.Sockets;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ListViewApp
 {
@@ -20,8 +22,8 @@ namespace ListViewApp
 
             Devices.Clear();
 
-            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
-            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Apple Device", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "📋", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
+            Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "🚀", MAUI.Shared.Models.DevicePlatformOwner.Apple), null, null, false));
             Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Microsoft", MAUI.Shared.Models.DevicePlatformOwner.Microsoft), null, null, false));
             Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
             Devices.Add(new DeviceViewModel(new MAUI.Models.Device(Guid.NewGuid(), "Some Samsung Device", MAUI.Shared.Models.DevicePlatformOwner.Google), null, null, false));
